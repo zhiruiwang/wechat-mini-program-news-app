@@ -1,0 +1,20 @@
+<!-- 新闻类别tab -->
+<view class="cat-list">
+  <view class="cat-item {{currentTab===item?'active':''}}" data-current="{{item}}" wx:for="{{cat}}" bindtap="clickTab">
+    {{item}}
+  </view>
+</view> 
+<!-- 头条新闻 -->
+<view class='head-wrapper' data-current="{{id}}" bindtap="onTabnews">
+  <image class="head-image" src="{{image}}" binderror="binderrorimg" data-errorimg="{{index}}"></image>
+  <view class='head-title'>{{title}}</view>
+  <view class='head-source-date'>{{source+" "+date}}</view>
+</view> 
+<!-- 其余新闻 -->
+ <view class='rest-wrapper' wx:for="{{rest_news}}" data-current="{{item.id}}" bindtap="onTabnews">
+  <view class='rest_text'>
+    <view class='rest-title'>{{item.title}}</view>
+    <view class='rest-source-date'>{{item.source+" "+item.date}}</view>
+  </view>
+  <image class="rest-image" src="{{item.firstImage}}" binderror="binderrorimg" data-errorimg="{{index}}"></image>
+</view> 

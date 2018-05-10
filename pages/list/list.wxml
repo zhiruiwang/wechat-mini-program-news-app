@@ -1,0 +1,11 @@
+<!-- 标题 -->
+<view class="title">{{title}}</view>
+<view class='subtitle'>
+  <view class='source-date'>{{source+" "+date}}</view>
+  <view class='readCount'>阅读 {{readCount}}</view>
+</view>
+<!-- 内容 -->
+<view wx:for="{{content}}">
+  <view class='text' wx:if='{{item.type=="p"}}'>{{item.text}}</view>
+  <image class='image' wx:if='{{item.type=="image"}}' src='{{item.src}}' binderror="binderrorimg" data-errorimg="{{index}}"></image>
+</view>

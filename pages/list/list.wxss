@@ -1,0 +1,47 @@
+/* 标题 */
+.title {
+  border-top: 2rpx solid #27b3f9;
+  text-align:left;
+  font-size:40rpx;
+  line-height:56rpx;
+  padding-top: 50rpx;
+  padding-bottom: 20rpx;
+  padding-left: 10rpx;
+}
+
+.subtitle {
+  display: flex;
+  font-size: 30rpx;
+  line-height: 42rpx;
+  opacity: 0.65;
+  color: black;
+  padding-bottom: 10rpx;
+}
+
+.source-date {
+  text-align:left;
+  padding-left: 20rpx;
+}
+
+.readCount {
+  position: absolute;
+  right: 0;
+  padding-right: 20rpx;
+}
+
+/* 内容 */
+.text {
+  text-align: left;
+  font-size: 30rpx;
+  line-height: 42rpx;
+  padding-right: 20rpx;
+  padding-left: 20rpx;
+  opacity: 0.75;
+}
+
+.image {
+  padding-top: 50rpx;
+  display: block;
+  margin: 0 auto;
+  padding-bottom: 50rpx;
+}
