@@ -36,6 +36,16 @@
   padding-top: 300rpx;
 }
 
+.hot {
+  position: absolute;
+  right: 0;
+  top: 0;
+  color: white;
+  background-color: red;
+  font-size: 30rpx;
+  line-height: 42rpx;
+}
+
 .head-title {
   text-align:left;
   font-size:30rpx;

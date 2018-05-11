@@ -6,15 +6,16 @@
 </view> 
 <!-- 头条新闻 -->
 <view class='head-wrapper' data-current="{{id}}" bindtap="onTabnews">
-  <image class="head-image" src="{{image}}" binderror="binderrorimg" data-errorimg="{{index}}"></image>
+  <image class="head-image" src="{{image?image:'/images/default-image.jpg'}}" binderror="binderrorimg" data-errorimg="{{index}}"></image>
+  <view class='hot'>热门</view> 
   <view class='head-title'>{{title}}</view>
-  <view class='head-source-date'>{{source+" "+date}}</view>
+  <view class='head-source-date'>{{(source?source:"未知来源")+" "+date}}</view>
 </view> 
 <!-- 其余新闻 -->
  <view class='rest-wrapper' wx:for="{{rest_news}}" data-current="{{item.id}}" bindtap="onTabnews">
   <view class='rest_text'>
     <view class='rest-title'>{{item.title}}</view>
-    <view class='rest-source-date'>{{item.source+" "+item.date}}</view>
+    <view class='rest-source-date'>{{(item.source?item.source:"未知来源")+" "+item.date}}</view>
   </view>
-  <image class="rest-image" src="{{item.firstImage}}" binderror="binderrorimg" data-errorimg="{{index}}"></image>
+  <image class="rest-image" src="{{item.firstImage?item.firstImage:'/images/default-image.jpg'}}" binderror="binderrorimg" data-errorimg="{{index}}"></image>
 </view> 

@@ -89,7 +89,7 @@ Page({
     var errorImgIndex = e.target.dataset.errorimg //获取循环的下标
     var imgObject = "carlistData[" + errorImgIndex + "].img" //carlistData为数据源，对象数组
     var errorImg = {}
-    errorImg[imgObject] = "http://cs.pes.edu/wp-content/uploads/2016/06/default-2.jpg" //我们构建一个对象
+    errorImg[imgObject] = "/images/default" //我们构建一个对象
     this.setData(errorImg) //修改数据源对应的数据
   },
   /**
